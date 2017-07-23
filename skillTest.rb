@@ -33,6 +33,9 @@ bot.command(:invite, chain_usable: false) do |event|
   event.bot.invite_url
 end
 
+bot.command :haha do |event|
+  event.respond "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\nhttps://www.youtube.com/watch?v=0vhfEgQVDAc"
+end
 
 #tentativa usando site da rito gomes
 # bot.command :skill do |event, *args|
