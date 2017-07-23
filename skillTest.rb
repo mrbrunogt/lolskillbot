@@ -79,6 +79,49 @@ end
 # end
 
 #tentativa usando site da leagueoflegends wikia (gods)
+
+#comando sem mostrar imagem
+bot.command :skillN do |event, *args|
+  if args.length.eql? 2 then
+    champ = args[0]
+    hab = args[1]
+  elsif args.length.eql? 3 then
+    champ = "#{args[0]} #{args[1]}"
+    hab = args[2]
+  end
+  if champList.include? champ and habList.include? hab then
+    if champ.include? ' ' then
+      champ.sub!(' ','_')
+    end
+    page = "http://leagueoflegends.wikia.com/wiki/#{champ}/Abilities"
+    champPage = Nokogiri::HTML(RestClient.get(page))
+    case hab
+    when "P"
+      response = "#{champPage.css('div.skill')[0].text}"
+      response = response.gsub /^$\n/, ''
+    when "Q"
+      response = champPage.css("div.skill.skill_q")[0].text
+      response = response.gsub /^$\n/, ''
+    when "W"
+      response = champPage.css("div.skill.skill_w")[0].text
+      response = response.gsub /^$\n/, ''
+    when "E"
+      response = champPage.css("div.skill.skill_e")[0].text
+      response = response.gsub /^$\n/, ''
+    when "R"
+      response = champPage.css("div.skill.skill_r")[0].text
+      response = response.gsub /^$\n/, ''
+    end
+    if champ.include? "Yasuo" then
+      event.respond "http://www.apaecuritiba.org.br"
+    end
+    event.respond response
+  else
+    even.respond "Habilidade ou champion inválido hehe xD"
+  end
+end
+
+#comando padrão mostra imagem
 bot.command :skill do |event, *args|
   if args.length.eql? 2 then
     champ = args[0]
@@ -91,23 +134,114 @@ bot.command :skill do |event, *args|
     if champ.include? ' ' then
       champ.sub!(' ','_')
     end
-    page = "http://pt-br.leagueoflegends.wikia.com/wiki/#{champ}"
+    page = "http://leagueoflegends.wikia.com/wiki/#{champ}/Abilities"
     champPage = Nokogiri::HTML(RestClient.get(page))
     case hab
     when "P"
-      response = champPage.css('div.skill')[0].text
+      response = "#{champPage.css('div.skill')[0].text}"
+      response = response.gsub /^$\n/, ''
+      skill_title = response.lines.first
+      if skill_title.include? ' ' then
+        skill_title.gsub!(' ','_')
+      end
+      if skill_title.include? "\n" then
+        skill_title.gsub!("\n",'')
+      end
+      skill_title.sub!('!','')
+      i = 0
+      img = champPage.css("div.skill img")[i].attr('src')
+      while true
+        if img.include? skill_title then
+          break
+        end
+        i = i+1
+        img = champPage.css("div.skill img")[i].attr('src')
+      end
     when "Q"
       response = champPage.css("div.skill.skill_q")[0].text
+      response = response.gsub /^$\n/, ''
+      skill_title = response.lines.first
+      if skill_title.include? ' ' then
+        skill_title.gsub!(' ','_')
+      end
+      if skill_title.include? "\n" then
+        skill_title.gsub!("\n",'')
+      end
+      skill_title.sub!('!','')
+      i = 0
+      img = champPage.css("div.skill.skill_q img")[i].attr('src')
+      while true
+        if img.include? skill_title then
+          break
+        end
+        i = i+1
+        img = champPage.css("div.skill.skill_q img")[i].attr('src')
+      end
     when "W"
       response = champPage.css("div.skill.skill_w")[0].text
+      response = response.gsub /^$\n/, ''
+      skill_title = response.lines.first
+      if skill_title.include? ' ' then
+        skill_title.gsub!(' ','_')
+      end
+      if skill_title.include? "\n" then
+        skill_title.gsub!("\n",'')
+      end
+      skill_title.sub!('!','')
+      i = 0
+      img = champPage.css("div.skill.skill_w img")[i].attr('src')
+      while true
+        if img.include? skill_title then
+          break
+        end
+        i = i+1
+        img = champPage.css("div.skill.skill_w img")[i].attr('src')
+      end
     when "E"
       response = champPage.css("div.skill.skill_e")[0].text
+      response = response.gsub /^$\n/, ''
+      skill_title = response.lines.first
+      if skill_title.include? ' ' then
+        skill_title.gsub!(' ','_')
+      end
+      if skill_title.include? "\n" then
+        skill_title.gsub!("\n",'')
+      end
+      skill_title.sub!('!','')
+      i = 0
+      img = champPage.css("div.skill.skill_e img")[i].attr('src')
+      while true
+        if img.include? skill_title then
+          break
+        end
+        i = i+1
+        img = champPage.css("div.skill.skill_e img")[i].attr('src')
+      end
     when "R"
       response = champPage.css("div.skill.skill_r")[0].text
+      response = response.gsub /^$\n/, ''
+      skill_title = response.lines.first
+      if skill_title.include? ' ' then
+        skill_title.gsub!(' ','_')
+      end
+      if skill_title.include? "\n" then
+        skill_title.gsub!("\n",'')
+      end
+      skill_title.sub!('!','')
+      i = 0
+      img = champPage.css("div.skill.skill_r img")[i].attr('src')
+      while true
+        if img.include? skill_title then
+          break
+        end
+        i = i+1
+        img = champPage.css("div.skill.skill_r img")[i].attr('src')
+      end
     end
     if champ.include? "Yasuo" then
       event.respond "http://www.apaecuritiba.org.br"
     end
+    event.respond img
     event.respond response
   else
     even.respond "Habilidade ou champion inválido hehe xD"
