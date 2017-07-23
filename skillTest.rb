@@ -147,7 +147,8 @@ bot.command :skill do |event, *args|
       if skill_title.include? "\n" then
         skill_title.gsub!("\n",'')
       end
-      skill_title.sub!('!','')
+      skill_title.sub!('!',"\%21")
+      skill_title.sub!('\'',"\%27")
       i = 0
       img = champPage.css("div.skill img")[i].attr('src')
       while true
@@ -167,7 +168,8 @@ bot.command :skill do |event, *args|
       if skill_title.include? "\n" then
         skill_title.gsub!("\n",'')
       end
-      skill_title.sub!('!','')
+      skill_title.sub!('!',"\%21")
+      skill_title.sub!('\'',"\%27")
       i = 0
       img = champPage.css("div.skill.skill_q img")[i].attr('src')
       while true
@@ -187,7 +189,8 @@ bot.command :skill do |event, *args|
       if skill_title.include? "\n" then
         skill_title.gsub!("\n",'')
       end
-      skill_title.sub!('!','')
+      skill_title.sub!('!',"\%21")
+      skill_title.sub!('\'',"\%27")
       i = 0
       img = champPage.css("div.skill.skill_w img")[i].attr('src')
       while true
@@ -207,7 +210,8 @@ bot.command :skill do |event, *args|
       if skill_title.include? "\n" then
         skill_title.gsub!("\n",'')
       end
-      skill_title.sub!('!','')
+      skill_title.sub!('!',"\%21")
+      skill_title.sub!('\'',"\%27")
       i = 0
       img = champPage.css("div.skill.skill_e img")[i].attr('src')
       while true
@@ -227,7 +231,8 @@ bot.command :skill do |event, *args|
       if skill_title.include? "\n" then
         skill_title.gsub!("\n",'')
       end
-      skill_title.sub!('!','')
+      skill_title.sub!('!',"\%21")
+      skill_title.sub!('\'',"\%27")
       i = 0
       img = champPage.css("div.skill.skill_r img")[i].attr('src')
       while true
