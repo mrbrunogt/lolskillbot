@@ -23,7 +23,8 @@ bot.command :tilt do |event|
 end
 
 bot.command :credits do |event|
-  event.respond "Feito por Juan 'Zuk' Brito, utilizando Discordrb e nokogiri!"
+  event.respond "Feito por Juan 'Zuk' Brito, utilizando Discordrb e nokogiri => https://github.com/juanbritom/lolskillbot! \n
+  Informações retiradas da League of Legends wikia - http://pt-br.leagueoflegends.wikia.com/wiki/League_of_Legends_Wiki"
 end
 
 bot.command(:invite, chain_usable: false) do |event|
