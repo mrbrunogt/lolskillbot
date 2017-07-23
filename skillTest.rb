@@ -11,7 +11,7 @@ champList = ["Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bl
   "Rammus", "Renekton", "Riven", "Rumble", "Ryze", "Sejuani", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Talon", "Taric", "Teemo", "Tristana",
   "Trundle", "Trydamere", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xerath", "Xin Zhao", "Yorick", "Ziggs","Zilean","Zyra",
   "Zed","Vi","Syndra","Rengar","Nami","Kha'Zix","Jayce","Elise","Draven","Darius","Diana","Aatrox","Jinx","Lissandra","Lucian","Quinn","Thresh","Yasuo","Zac","Azir","Braum","Gnar","Kalista","Rek'Sai","Vel'Koz",
-  "Bard","Ekko","Illaoi","Kindred","Tahm Kench","Aurelion Sol","Camille","Ivern","Jhin","Kled","Taliyah","Xayah","Rakan","Kayn"]
+  "Bardo","Ekko","Illaoi","Kindred","Tahm Kench","Aurelion Sol","Camille","Ivern","Jhin","Kled","Taliyah","Xayah","Rakan","Kayn"]
 habList = ["P","Q","W","E","R"]
 
 #this is a test command, dont use it o.o
