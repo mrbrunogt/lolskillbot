@@ -14,6 +14,7 @@ champList = ["Ahri", "Akali", "Alistar", "Amumu", "Anivia", "Annie", "Ashe", "Bl
   "Bard","Ekko","Illaoi","Kindred","Tahm Kench","Aurelion Sol","Camille","Ivern","Jhin","Kled","Taliyah","Xayah","Rakan","Kayn"]
 habList = ["P","Q","W","E","R"]
 
+#this is a test command, dont use it o.o
 bot.command :fkU do |event|
     event.respond "fk u #{event.user.name}!"
 end
