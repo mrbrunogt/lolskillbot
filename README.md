@@ -1,14 +1,17 @@
 # lolskillbot
 
 Bot pra discord responsável por mostrar determinada habilidade (ou passiva) de algum champion
+
 >Discord bot that replies champion's passive or active skills
 
 # Como usar / How to use
 
 !skill NomeDoChampion TeclaDaHabilidade
+
 !skillN NomeDoChampion TeclaDaHabilidade (=> mostra apenas descrição da skill sem imagem)
 
 >!skill ChampionName SkillKey
+
 >!skillN ChampionName SkillKey (=> shows only skill description, without its image)
 
 
@@ -16,7 +19,8 @@ O(s) nome(s) do champion deve estar capitalizado (por exemplo Sona, Master Yi, R
 As "teclas" de habilidades seriam "P" (passiva), "Q","W","E","R
 
 >Champion(s)'s name must be capitalized (as in Sona, Master Yi, Rek'Sai)
->The skills keys would be "P" (passive), "Q","W","E","R
+
+>The skills "keys" would be "P" (passive), "Q","W","E","R
 
 # Invite link
 
