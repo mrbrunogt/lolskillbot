@@ -28,3 +28,7 @@ O bot está sofrendo constantes modificações e, consequentemente, períodos co
 >The bot is still under development and so, it may not be online at all times
 
 https://discordapp.com/oauth2/authorize?&client_id=338158557344038923&scope=bot
+
+# Credits
+
+This was made possible with Discordrb API: https://github.com/meew0/discordrb#license <3
