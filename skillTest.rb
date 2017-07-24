@@ -127,6 +127,15 @@ bot.command :skillN do |event, *args|
   end
 end
 
+#mostrar page dum champion no probuilds (mais rapido que google?)
+bot.command :prob do |event, *args|
+  if(args.length<2)
+    event.respond "http://www.probuilds.net/champions/details/#{args[0]}"
+  else
+    event.respond "http://www.probuilds.net/champions/details/#{args[0]}\%20#{args[1]}"
+  end
+end
+
 #comando padrão mostra imagem
 bot.command :skill do |event, *args|
   if args.length.eql? 2 then
