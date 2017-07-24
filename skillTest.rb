@@ -16,6 +16,14 @@ habList = ["P","Q","W","E","R"]
 tiltList = ["https://clips.twitch.tv/TrustworthyGlamorousWhaleDoubleRainbow",
    "https://clips.twitch.tv/FragileTransparentMeatloafUncleNox",
    "https://clips.twitch.tv/SpotlessSpeedyPassionfruitBCouch"]
+
+#this is a very important part of the code, please stay away
+bot.command :HI do |event|
+  event.respond "HIIIIIIIIIIIIIIIIIIIIIUIIIIIIIIIIIIIIHUHIIIIIIIIIIIIIIIII #{event.user.name}!"
+end
+
+
+
 #this is a test command, dont use it o.o
 bot.command :fkU do |event|
     event.respond "fk u #{event.user.name}!"
@@ -123,7 +131,7 @@ bot.command :skillN do |event, *args|
     end
     event.respond response
   else
-    even.respond "Habilidade ou champion inválido hehe xD"
+    event.respond "Habilidade ou champion inválido hehe xD"
   end
 end
 
@@ -264,7 +272,7 @@ bot.command :skill do |event, *args|
     event.respond img
     event.respond response
   else
-    even.respond "Habilidade ou champion inválido hehe xD"
+    event.respond "Habilidade ou champion inválido hehe xD"
   end
 end
 
