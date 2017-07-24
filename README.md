@@ -31,4 +31,4 @@ https://discordapp.com/oauth2/authorize?&client_id=338158557344038923&scope=bot
 
 # Credits
 
-This was made possible with Discordrb API: https://github.com/meew0/discordrb#license <3
+This was made possible with Discordrb API: https://github.com/meew0/discordrb <3
